@@ -1,4 +1,4 @@
-import { PerspectiveCamera } from '@react-three/drei';
+import { PerspectiveCamera, Ring } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import HackerRoom from '../component/HackerRoom';
 import { Suspense } from 'react';
@@ -7,6 +7,9 @@ import CanvasLoader from '../component/CanvasLoader';
 import useMediaQuery from 'react-responsive';
 import { calculateSizes } from '../constants';
 import Target from '../component/Target';
+import ReactLogo from '../component/ReactLogo';
+import Cube from '../component/Cube';
+import Rings from '../component/Rings';
 
 function Hero() {
   const isSmall = useMediaQuery({ maxWidth: 440 });
@@ -40,6 +43,9 @@ function Hero() {
             />
             <group>
               <Target position={sizes.targetPosition} />
+              <ReactLogo position={sizes.reactLogoPosition} />
+              <Cube position={sizes.cubePosition} />
+              <Rings position={sizes.ringPosition} />
             </group>
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
