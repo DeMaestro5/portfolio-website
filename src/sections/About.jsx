@@ -12,7 +12,10 @@ function About() {
   }
 
   return (
-    <section className='grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full'>
+    <section
+      className='grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full'
+      id='about'
+    >
       <div className='col-span-1 xl:row-span-3'>
         <div className='grid-container'>
           <img
